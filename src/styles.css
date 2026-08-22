@@ -1,0 +1,144 @@
+/* App-local styles. Mesh chrome is provided by @baditaflorin/mesh-common. */
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  background: var(--mesh-bg);
+  color: var(--mesh-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+.handoff-board {
+  width: min(100% - 2rem, 42rem);
+  margin: 0 auto;
+  padding: 5.5rem 0 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--mesh-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(2rem, 7vw, 3.3rem);
+  line-height: 1;
+}
+
+.lede {
+  max-width: 36rem;
+  color: color-mix(in srgb, var(--mesh-fg) 82%, transparent);
+  line-height: 1.55;
+}
+
+.host-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.25rem 0 1rem;
+  padding: 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--mesh-fg) 18%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--mesh-bg) 85%, var(--mesh-fg));
+}
+
+.host-card.is-mine {
+  border-color: var(--mesh-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--mesh-accent) 19%, transparent);
+}
+
+.host-icon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--mesh-accent) 25%, transparent);
+  color: var(--mesh-accent);
+  font-size: 1.65rem;
+}
+
+.host-copy h2 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.host-status {
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.timestamp {
+  margin: 0;
+  opacity: 0.65;
+  font-size: 0.86rem;
+}
+
+.handoff-actions {
+  display: grid;
+}
+
+button {
+  min-height: 3rem;
+  border: 0;
+  border-radius: 0.8rem;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--mesh-accent);
+  color: #1d1009;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--mesh-fg);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.handoff-tip {
+  margin-top: 2rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--mesh-accent);
+  background: color-mix(in srgb, var(--mesh-bg) 86%, var(--mesh-fg));
+}
+
+.handoff-tip h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.handoff-tip ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.65;
+}
